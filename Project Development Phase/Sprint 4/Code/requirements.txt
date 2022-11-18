@@ -1,0 +1,12 @@
+flask-cors
+flask-mail
+pandas
+plotly
+matplotlib
+numpy
+apscheduler
+ibm-db
+flask
+pillow
+sendgrid
+python-dotenv

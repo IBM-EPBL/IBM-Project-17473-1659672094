@@ -1,1 +1,1 @@
-This is the templates folder.
+Yeehaw
