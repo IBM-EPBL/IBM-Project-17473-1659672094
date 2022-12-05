@@ -1,0 +1,16 @@
+FROM python:3
+
+WORKDIR /app
+
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
+ENV DB_CONN_STRING=DATABASE=bludb;HOSTNAME=1bbf73c5-d84a-4bb0-85b9-ab1a4348f4a4.c3n41cmd0nqnrk39u98g.databases.appdomain.cloud;PORT=32286;Security=SSL;SSLServerCertificate=DigiCertGlobalRootCA.crt;UID=frl74949;PWD=OZ4hHS6Qe6R7ZUlX
+
+COPY . .
+
+# ENTRYPOINT [ “python” ]
+
+EXPOSE 8000
+
+CMD [ "flask", "run", "--host=0.0.0.0", "--port=8000"]
+
