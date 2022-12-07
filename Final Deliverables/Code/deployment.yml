@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: expense-manager
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: expense-manager
+  template:
+    metadata:
+      labels:
+        app: expense-manager
+    spec:
+      containers:
+        - name: expense-manager
+          image: us.icr.io/expense_manager/expense_manager@sha256:cd194a9c327f96d3b69522225c746320af89b1d2bbf13caae39f5363432e8c05
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8000
